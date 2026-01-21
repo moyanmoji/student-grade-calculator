@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeMaster | Professional Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Grade Calculator</h1>
+            <p>Enter your course details to calculate weighted averages.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="grade-form">
+                    <div class="input-group">
+                        <input type="text" id="course-name" placeholder="Course Name (e.g. Math)" required>
+                        <input type="number" id="course-mark" placeholder="Mark (%)" min="0" max="100" required>
+                        <input type="number" id="course-weight" placeholder="Weight (%)" min="1" max="100" required>
+                        <button type="submit" id="add-btn">Add Course</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Final Grade</h3>
+                    <p id="final-avg">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Status</h3>
+                    <p id="pass-status">-</p>
+                </div>
+            </section>
+
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Mark</th>
+                        <th>Weight</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="course-list">
+                    </tbody>
+            </table>
+            
+            <button id="clear-btn" class="secondary-btn">Clear All Data</button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
